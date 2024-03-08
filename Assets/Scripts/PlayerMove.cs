@@ -21,11 +21,17 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Vector3 movementDirection = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
-       // transform.Translate(movementDirection * Speed * Time.deltaTime);
+        //Needed for Both
         horizontal = Input.GetAxisRaw("Horizontal") * Speed;
         vertical = Input.GetAxisRaw("Vertical") * Speed;
-         rb.velocity = new Vector2(horizontal, vertical);
+
+        //Rigidbody needed
+        rb.velocity = new Vector3(horizontal, vertical);
+
+        //No Rigidbody
+       // Vector3 movement = new Vector3(horizontal, vertical, 0);
+        //transform.Translate(movement * Speed * Time.deltaTime);
+        
         CheckPlayerBounds();
     }
 
