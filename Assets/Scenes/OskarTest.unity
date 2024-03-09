@@ -574,6 +574,8 @@ MonoBehaviour:
   player: {fileID: 2843046136189316482, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
   shooter: {fileID: 3575758651165532254, guid: c42e1f8f0fe9f1f498b07fa01dfbd871, type: 3}
   spawner: {fileID: 304815229}
+  pusherSpawner: {fileID: 1632756972}
+  pusher: {fileID: 4837884883408184118, guid: bd5c9fff4e5dd3f49bcb0223661ba3c4, type: 3}
 --- !u!114 &900540157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +770,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1632756972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1632756973}
+  m_Layer: 0
+  m_Name: PusherSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1632756973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632756972}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.01698285, y: 0.1529426, z: -0.040004816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -778,3 +811,4 @@ SceneRoots:
   - {fileID: 900540151}
   - {fileID: 808177732}
   - {fileID: 304815230}
+  - {fileID: 1632756973}
