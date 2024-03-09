@@ -22,11 +22,11 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         //Needed for Both
-        horizontal = Input.GetAxisRaw("Horizontal") * Speed;
-        vertical = Input.GetAxisRaw("Vertical") * Speed;
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
 
         //Rigidbody needed
-        rb.velocity = new Vector3(horizontal, vertical);
+        rb.velocity = new Vector3(horizontal, vertical).normalized * Speed;
 
         //No Rigidbody
        // Vector3 movement = new Vector3(horizontal, vertical, 0);
@@ -41,6 +41,6 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void CheckPlayerBounds() {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3, 3), Mathf.Clamp(transform.position.y, -3.5f, 5), 0);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3, 3), Mathf.Clamp(transform.position.y, -4.4f, 4.4f), 0);
     }
 }
