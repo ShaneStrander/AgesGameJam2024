@@ -62,12 +62,17 @@ public class SwerveMovement : MonoBehaviour
         if (accelerationinput == 0) {
             rb.drag = Mathf.Lerp(rb.drag, 3.0f, Time.deltaTime * 3);
     }   else rb.drag = 0;
-
+   
         //Creates a force for the Ball
-        Vector2 forward = transform.up * accelerationinput * accelerationfactor;
+        Vector2 forward = transform.up * maxspeed;
 
         //Apply force and moves the ball forward
-        rb.AddForce(forward, ForceMode2D.Force);
+        if (Input.GetKey("w"))
+        {
+            rb.AddForce(forward);
+        }
+        
+
     }
 
     void ApplySteering()
