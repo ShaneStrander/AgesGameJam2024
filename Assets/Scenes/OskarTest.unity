@@ -514,7 +514,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900540148}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6faee0dc8cdf144cb003d0f9d0052ac, type: 3}
   m_Name: 
@@ -533,7 +533,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900540148}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817e3c079d89eaf419c26ff3d837e32f, type: 3}
   m_Name: 
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5558ea5fc0b6c746bdf68e64bcb3cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 265105613908280038, guid: 6b88a6611f14b2d4dad3890bc1057d9d, type: 3}
+  enemyPrefab: {fileID: 265105613908280038, guid: 92c4161206538aa47b01140e9a62d2ca, type: 3}
   spawnInterval: 2
   moveSpeedV: 0.002
   moveSpeedH: 0.005
