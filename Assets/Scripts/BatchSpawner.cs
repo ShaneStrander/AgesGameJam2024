@@ -21,37 +21,41 @@ public class BatchSpawner : MonoBehaviour
     {
         currentSpawnTimerThreshold = Random.Range(spawnTimerThresholdMin, spawnTimerThresholdMax);
         arrayPos = 0;
-        UpdateArrayVars(true);
+        ResetBatch(true);
     }
 
     void Update()
     {
-
         timer += Time.deltaTime;
         if (timer > currentSpawnTimerThreshold && timer < currentSpawnTimerThreshold + spawnInterval * currentInterval && timer > currentSpawnTimerThreshold + spawnInterval * (currentInterval - 1))
-        {
-            Debug.Log("testy");
+        { 
             if (currentInterval <= numberOfIntervals)
             {
+                Debug.Log("Current Interval: " + currentInterval);
                 SpawnBatchInInterval(arrayPos);
-                Debug.Log("HÄR");
                 currentInterval++;
             }
             else if (currentInterval > numberOfIntervals) 
             {
-                UpdateArrayVars(false);
+                Debug.Log("UpdateArrayVars");
+                ResetBatch(false);
             }
         }
-
     }
 
-    private void UpdateArrayVars(bool first)
+    private void ResetBatch(bool first)
     {
         if (!first)
-        { arrayPos = Random.Range(0, batches.Length - 1); }
+        { 
+            int rand = Random.Range(0, batches.Length - 1);
+            Debug.Log(rand);
+            arrayPos = rand;
+        }
 
         numberOfIntervals = batches[arrayPos].numberOfIntervals;
         spawnInterval = batches[arrayPos].spawnInterval;
+        timer = 0;
+        currentInterval = 1;
     }
 
     void SpawnBatchInInterval(int pos)
