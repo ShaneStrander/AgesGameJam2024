@@ -166,11 +166,11 @@ GameObject:
   - component: {fileID: 367060202}
   m_Layer: 0
   m_Name: LeftWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &367060202
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -232,8 +232,8 @@ Transform:
   m_GameObject: {fileID: 367060201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 10, z: 1}
+  m_LocalPosition: {x: -9.2116, y: 0, z: 0}
+  m_LocalScale: {x: 0.5772342, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -382,11 +382,11 @@ GameObject:
   - component: {fileID: 808177731}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &808177731
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -448,8 +448,8 @@ Transform:
   m_GameObject: {fileID: 808177730}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: -0, z: 0}
-  m_LocalScale: {x: 5, y: 10, z: 1}
+  m_LocalPosition: {x: 9.2116, y: -0, z: 0}
+  m_LocalScale: {x: 0.57676095, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -464,8 +464,9 @@ GameObject:
   m_Component:
   - component: {fileID: 900540151}
   - component: {fileID: 900540150}
-  - component: {fileID: 900540152}
   - component: {fileID: 900540153}
+  - component: {fileID: 900540152}
+  - component: {fileID: 900540154}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -513,7 +514,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900540148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6faee0dc8cdf144cb003d0f9d0052ac, type: 3}
   m_Name: 
@@ -532,7 +533,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900540148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817e3c079d89eaf419c26ff3d837e32f, type: 3}
   m_Name: 
@@ -540,6 +541,22 @@ MonoBehaviour:
   enemyPrefab: {fileID: 265105613908280038, guid: 6b88a6611f14b2d4dad3890bc1057d9d, type: 3}
   spawnInterval: 2
   moveSpeed: 5
+--- !u!114 &900540154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900540148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5558ea5fc0b6c746bdf68e64bcb3cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 265105613908280038, guid: 6b88a6611f14b2d4dad3890bc1057d9d, type: 3}
+  spawnInterval: 2
+  moveSpeedV: 0.002
+  moveSpeedH: 0.005
 --- !u!1 &1182000799
 GameObject:
   m_ObjectHideFlags: 0
