@@ -21,13 +21,13 @@ public class EnemyType3Spawner : MonoBehaviour
         enemyHolder = new GameObject("EnemyHolder");
 
         // Find the player GameObject and get its transform
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
         leftWall = GameObject.FindGameObjectWithTag("Wall")?.transform;
         rightWall = GameObject.FindGameObjectWithTag("Wall")?.transform;
     }
 
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
         //// Increment the timer
         //timer += Time.deltaTime;
 

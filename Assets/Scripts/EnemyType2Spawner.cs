@@ -23,11 +23,12 @@ public class EnemyType2Spawner : MonoBehaviour
         enemyHolder = new GameObject("EnemyHolder");
 
         // Find the player GameObject and get its transform
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        
     }
 
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
         //// Increment the timer
         //timer += Time.deltaTime;
 

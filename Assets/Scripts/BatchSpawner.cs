@@ -30,6 +30,7 @@ public class BatchSpawner : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > currentSpawnTimerThreshold && timer < currentSpawnTimerThreshold + spawnInterval * currentInterval && timer > currentSpawnTimerThreshold + spawnInterval * (currentInterval - 1))
         {
+            Debug.Log("testy");
             if (currentInterval <= numberOfIntervals)
             {
                 SpawnBatchInInterval(arrayPos);
