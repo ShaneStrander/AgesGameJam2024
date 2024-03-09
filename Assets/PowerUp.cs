@@ -17,7 +17,6 @@ public class PowerUp : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log("GOT UPGRADE");
             shooter.GetComponent<Shooting>().ShootStyle = Style;
             shooter.GetComponent<Shooting>().PowerTimer = 0f;
             Destroy(gameObject);
