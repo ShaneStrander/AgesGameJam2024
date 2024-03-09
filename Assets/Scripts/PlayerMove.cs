@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
    public float Speed;
    Rigidbody2D rb;
 
+    [SerializeField]
+    private float turn;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,11 @@ public class PlayerMove : MonoBehaviour
         //transform.Translate(movement * Speed * Time.deltaTime);
         
         CheckPlayerBounds();
+
+        if (rb.velocity != Vector2.zero) {
+            Quaternion toRotate = Quaternion.LookRotation(Vector3.forward, rb.velocity).normalized;
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, turn * Time.deltaTime);
+        }
     }
 
     private void FixedUpdate()
