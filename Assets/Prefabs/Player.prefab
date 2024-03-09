@@ -41,10 +41,10 @@ GameObject:
   m_Component:
   - component: {fileID: 88468849014512460}
   - component: {fileID: 900291529275274768}
-  - component: {fileID: 8050309274335408097}
-  - component: {fileID: 835882148918255479}
   - component: {fileID: -1047898745129398382}
   - component: {fileID: 9151889917628544452}
+  - component: {fileID: 4437847879606484695}
+  - component: {fileID: 7917706574896987738}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -85,7 +85,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1d1a3bf94b79f234abe3e6c0ba086748, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -96,34 +96,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8050309274335408097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2843046136189316482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1fe92ee07af084da2b1ad11bb29e8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 5
-  turn: 200
---- !u!114 &835882148918255479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2843046136189316482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dedf9f2a67eef5438e1f11733f9671a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotSpeed: 200
-  ClockwiseRotation: 1
 --- !u!114 &-1047898745129398382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +103,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2843046136189316482}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5c36eb088cafb249a0782d141a92293, type: 3}
   m_Name: 
@@ -173,6 +145,34 @@ CapsuleCollider2D:
   m_Offset: {x: -0.007584214, y: -0.011376381}
   m_Size: {x: 1.2129209, y: 1.2205052}
   m_Direction: 0
+--- !u!114 &4437847879606484695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2843046136189316482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2de24df6e42be40881b1ed95af3684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  driftFactor: 0.3
+  accelerationfactor: 2
+  turnFactor: 6
+  maxspeed: 5
+--- !u!114 &7917706574896987738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2843046136189316482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae994711944b2b41a865561269af802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7837824266285241786
 GameObject:
   m_ObjectHideFlags: 0
