@@ -36,10 +36,12 @@ public class PlayerMove : MonoBehaviour
         
         CheckPlayerBounds();
 
-        if (rb.velocity != Vector2.zero) {
+       if (rb.velocity != Vector2.zero) {
             Quaternion toRotate = Quaternion.LookRotation(Vector3.forward, rb.velocity).normalized;
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotate, turn * Time.deltaTime);
-        }
+       }
+
+        transform.Rotate(Vector3.forward * horizontal * turn * Time.deltaTime);
     }
 
     private void FixedUpdate()
