@@ -20,6 +20,8 @@ public class Shooting : MonoBehaviour
     public Transform spread1;
     public Transform spread2;
 
+    public bool isScatterShot = false;
+
 
     Vector2 mousePos;
 
@@ -58,6 +60,15 @@ public class Shooting : MonoBehaviour
                 {
                     StartCoroutine(BurstShoot());
                     ElapsedTime = 0;
+                }
+                break;
+            case 4:
+                RateOfFire = 0.8f;
+                if (Input.GetButton("Fire1") && ElapsedTime >= RateOfFire)
+                {
+                    Shoot();
+                    ElapsedTime = 0;
+                    isScatterShot = true;
                 }
                 break;
            

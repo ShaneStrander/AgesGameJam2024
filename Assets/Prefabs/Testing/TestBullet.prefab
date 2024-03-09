@@ -171,3 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba9f0ea08a6a654cbd1d8acf1862c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shooter: {fileID: 0}
+  shootStyle: {fileID: 0}
+  bulletFab: {fileID: 434059811631503068}
