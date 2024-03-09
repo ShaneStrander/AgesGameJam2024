@@ -463,6 +463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 900540151}
+  - component: {fileID: 900540155}
   - component: {fileID: 900540150}
   - component: {fileID: 900540153}
   - component: {fileID: 900540152}
@@ -557,6 +558,19 @@ MonoBehaviour:
   spawnInterval: 2
   moveSpeedV: 0.002
   moveSpeedH: 0.005
+--- !u!114 &900540155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900540148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5815aec30915a4d8b26dd7a84808ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 11400000, guid: 7fbb4f7b6344b0c47bdf3bb4ff889cd0, type: 2}
 --- !u!1 &1182000799
 GameObject:
   m_ObjectHideFlags: 0

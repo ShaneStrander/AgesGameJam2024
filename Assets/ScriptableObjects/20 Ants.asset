@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: 20 Ants
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 265105613908280038, guid: 92c4161206538aa47b01140e9a62d2ca, type: 3}
-  numberOfPrefabsToCreate: 5
+  numberOfPrefabsToCreate: 20
   spawnInterval: 2
+  samePos: 0
+  randomPos: 0
+  evenSpreadPos: 0
