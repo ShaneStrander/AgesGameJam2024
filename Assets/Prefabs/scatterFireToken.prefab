@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4718202906486384447}
   m_Layer: 0
   m_Name: scatterFireToken
-  m_TagString: Untagged
+  m_TagString: PowerUp3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -197,7 +197,7 @@ MonoBehaviour:
   bulletForce: 20
   RateOfFire: 0.3
   ElapsedTime: 0
-  ShootStyle: 4
+  ShootStyle: 3
   spread1: {fileID: 5418335657002451608}
   spread2: {fileID: 4217223530670204823}
   isScatterShot: 0

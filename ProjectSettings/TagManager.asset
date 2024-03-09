@@ -8,6 +8,10 @@ TagManager:
   - enemy
   - Wall
   - Shooter
+  - Health
+  - PowerUp
+  - PowerUp2
+  - PowerUp3
   layers:
   - Default
   - TransparentFX
