@@ -123,6 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &295080122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7319831657496152945, guid: 354301c849bd411468d9ad6fd7e9320a, type: 3}
+  m_PrefabInstance: {fileID: 9066251451951650598}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &295080126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295080122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dedf9f2a67eef5438e1f11733f9671a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotSpeed: 200
+  ClockwiseRotation: 1
 --- !u!1 &1191781904
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,13 +295,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8553988345714423977, guid: 354301c849bd411468d9ad6fd7e9320a, type: 3}
+      propertyPath: turn
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8553988345714423977, guid: 354301c849bd411468d9ad6fd7e9320a, type: 3}
       propertyPath: Speed
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7319831657496152945, guid: 354301c849bd411468d9ad6fd7e9320a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 295080126}
   m_SourcePrefab: {fileID: 100100000, guid: 354301c849bd411468d9ad6fd7e9320a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
