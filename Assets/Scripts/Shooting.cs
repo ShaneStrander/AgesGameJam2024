@@ -23,6 +23,11 @@ public class Shooting : MonoBehaviour
 
     Vector2 mousePos;
 
+    private void Start()
+    {
+        cam = Camera.main;
+    }
+
     // Update is called once per frame
     void Update()
     {
