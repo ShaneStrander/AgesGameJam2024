@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4061965100165397664}
   - component: {fileID: 1816654545575165724}
   - component: {fileID: 7743806709701834654}
+  - component: {fileID: 4135966304411055188}
   m_Layer: 0
   m_Name: coneFireToken
   m_TagString: Untagged
@@ -120,3 +121,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!114 &4135966304411055188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841911067427275060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff58f134d60a2994fb03ff8afc7ca7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 0.15
+  speed: 10

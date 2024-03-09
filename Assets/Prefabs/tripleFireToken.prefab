@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4467398230155498120}
   - component: {fileID: 1796757853912263150}
   - component: {fileID: 6626156359960640318}
+  - component: {fileID: 2091826808549668285}
   m_Layer: 0
   m_Name: tripleFireToken
   m_TagString: Untagged
@@ -120,3 +121,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!114 &2091826808549668285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6072503858263603284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff58f134d60a2994fb03ff8afc7ca7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 0.15
+  speed: 10
