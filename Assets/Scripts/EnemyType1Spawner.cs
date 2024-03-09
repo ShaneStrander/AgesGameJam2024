@@ -47,7 +47,6 @@ public class EnemyType1Spawner : MonoBehaviour
         // Pass the player reference to the enemy's controller script
         EnemyController1 enemyController = newEnemy.AddComponent<EnemyController1>();
         enemyController.Initialize(player, moveSpeed);
-        Debug.Log("HÄR");
     }
 
     Vector3 GetRandomSpawnPosition()
@@ -109,10 +108,10 @@ public class EnemyController1 : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else
-        {
-            // If player is null (destroyed or not found), just destroy the enemy
-            Destroy(gameObject);
-        }
+        //else
+        //{
+        //    // If player is null (destroyed or not found), just destroy the enemy
+        //    Destroy(gameObject);
+        //}
     }
 }

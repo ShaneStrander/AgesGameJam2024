@@ -132,10 +132,10 @@ public class EnemyController2 : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else
-        {
-            // If player is null (destroyed or not found), just destroy the enemy
-            Destroy(gameObject);
-        }
+        //else
+        //{
+        //    // If player is null (destroyed or not found), just destroy the enemy
+        //    Destroy(gameObject);
+        //}
     }
 }

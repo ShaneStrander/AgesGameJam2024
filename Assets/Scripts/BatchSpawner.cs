@@ -28,11 +28,12 @@ public class BatchSpawner : MonoBehaviour
     {
 
         timer += Time.deltaTime;
-        if (timer > currentSpawnTimerThreshold && timer < currentSpawnTimerThreshold + spawnInterval * currentInterval)
+        if (timer > currentSpawnTimerThreshold && timer < currentSpawnTimerThreshold + spawnInterval * currentInterval && timer > currentSpawnTimerThreshold + spawnInterval * (currentInterval - 1))
         {
             if (currentInterval <= numberOfIntervals)
             {
                 SpawnBatchInInterval(arrayPos);
+                Debug.Log("HÄR");
                 currentInterval++;
             }
         }

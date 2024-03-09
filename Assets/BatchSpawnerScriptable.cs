@@ -8,6 +8,6 @@ public class BatchSpawnerScriptable : ScriptableObject
     public int numberOfIntervals; 
     public int numberOfPrefabsToCreatePerInterval;
 
-    [Header("Time between intervals in frames. If 0, all spawn at the same time")]
+    [Header("Time between intervals in seconds. If 0, all spawn at the same time")]
     public float spawnInterval;
 }
