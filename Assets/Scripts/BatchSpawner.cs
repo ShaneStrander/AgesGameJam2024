@@ -30,7 +30,10 @@ public class BatchSpawner : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > currentSpawnTimerThreshold && timer < currentSpawnTimerThreshold + spawnInterval * currentInterval)
         {
+            if (currentInterval <= numberOfIntervals)
+            {
 
+            }
         }
 
     }
