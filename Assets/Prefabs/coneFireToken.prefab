@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1816654545575165724}
   - component: {fileID: 7743806709701834654}
   - component: {fileID: 4135966304411055188}
-  m_Layer: 0
+  - component: {fileID: -7474128370297793614}
+  m_Layer: 9
   m_Name: coneFireToken
   m_TagString: PowerUp
   m_Icon: {fileID: 0}
@@ -98,10 +99,10 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 320
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -120,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.28
+  m_Radius: 1.4078636
 --- !u!114 &4135966304411055188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,3 +136,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleFactor: 0.15
   speed: 10
+--- !u!114 &-7474128370297793614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841911067427275060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02627d6a8a4bea742bd54812f239cc11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  Style: 2

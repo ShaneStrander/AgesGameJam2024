@@ -816,7 +816,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 5946496841949438488, guid: 38f0123804bbf454a9b7146bacdcba32, type: 3}
-  tokens: []
+  tokens:
+  - {fileID: 8841911067427275060, guid: ce46cae106485964f8b03ad3efde132d, type: 3}
+  - {fileID: 1073337053401802904, guid: 441c6d874f0243f408d3625a220438f7, type: 3}
+  - {fileID: 6072503858263603284, guid: ca0387c1fc372d24a9941681a33e156f, type: 3}
   spawnInterval: 2
   minX: -5
   maxX: 5

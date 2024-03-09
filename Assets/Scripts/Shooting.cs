@@ -12,8 +12,12 @@ public class Shooting : MonoBehaviour
 
     public float bulletForce = 20f;
 
-    public float RateOfFire = 0.3f;
+    public float RateOfFire = 0.7f;
     public float ElapsedTime = 0f;
+
+    public float PowerDuration = 10f;
+    public float PowerTimer = 0f;
+    public bool PowerActive = false;
 
     public int ShootStyle = 1;
 
@@ -35,40 +39,56 @@ public class Shooting : MonoBehaviour
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         ElapsedTime += Time.deltaTime;
+        PowerTimer += Time.deltaTime;
 
         switch (ShootStyle)
         {
             case 1:
-                RateOfFire = 0.6f;
+                
                 if (Input.GetButton("Fire1") && ElapsedTime >= RateOfFire)
                 {
                     Shoot();
                     ElapsedTime = 0;
-                }
+                }    
                 break;
             case 2:
-                RateOfFire = 0.6f;
+                
                 if (Input.GetButton("Fire1") && ElapsedTime >= RateOfFire)
                 {
                     SpreadShoot();
                     ElapsedTime = 0;
                 }
+                if (PowerTimer >= PowerDuration)
+                {
+                    PowerTimer = 0;
+                    ShootStyle = 1;
+                }
                 break;
             case 3:
-                RateOfFire = 0.8f;
+                
                 if (Input.GetButton("Fire1") && ElapsedTime >= RateOfFire)
                 {
                     StartCoroutine(BurstShoot());
                     ElapsedTime = 0;
                 }
+                if (PowerTimer >= PowerDuration)
+                {
+                    PowerTimer = 0;
+                    ShootStyle = 1;
+                }
                 break;
             case 4:
-                RateOfFire = 0.8f;
+                
                 if (Input.GetButton("Fire1") && ElapsedTime >= RateOfFire)
                 {
                     Shoot();
                     ElapsedTime = 0;
                     isScatterShot = true;
+                }
+                if (PowerTimer >= PowerDuration)
+                {
+                    PowerTimer = 0;
+                    ShootStyle = 1;
                 }
                 break;
            
