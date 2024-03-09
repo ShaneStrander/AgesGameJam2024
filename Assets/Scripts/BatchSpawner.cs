@@ -36,6 +36,10 @@ public class BatchSpawner : MonoBehaviour
                 Debug.Log("HÄR");
                 currentInterval++;
             }
+            else if (currentInterval > numberOfIntervals) 
+            {
+                UpdateArrayVars(false);
+            }
         }
 
     }

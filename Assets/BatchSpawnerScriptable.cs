@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 public class BatchSpawnerScriptable : ScriptableObject
 {
     public int enemyType; //the "ID" of the enemy. 0 Is butterfly, 1 is grasshopper and so on. Bad I know but it works for game jam
+    public int enemyType2;
     public int numberOfIntervals; 
     public int numberOfPrefabsToCreatePerInterval;
 
