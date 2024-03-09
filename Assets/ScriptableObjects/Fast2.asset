@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5099e607cfdefe442bb4853aee41cf8a, type: 3}
-  m_Name: 3Butterfly
+  m_Name: Fast2
   m_EditorClassIdentifier: 
-  enemyType: 0
-  enemyType2: 0
-  enemyType3: 0
-  numberOfIntervals: 3
-  numberOfPrefabsToCreatePerInterval: 1
-  spawnInterval: 1.5
+  enemyType: 010000000100000002000000
+  numberOfIntervals: 2
+  numberOfPrefabsToCreatePerInterval: 2
+  spawnInterval: 0.5

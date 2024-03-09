@@ -31,13 +31,11 @@ public class BatchSpawner : MonoBehaviour
         { 
             if (currentInterval <= numberOfIntervals)
             {
-                Debug.Log("Current Interval: " + currentInterval);
                 SpawnBatchInInterval(arrayPos);
                 currentInterval++;
             }
             else if (currentInterval > numberOfIntervals) 
             {
-                Debug.Log("UpdateArrayVars");
                 ResetBatch(false);
             }
         }
@@ -48,7 +46,6 @@ public class BatchSpawner : MonoBehaviour
         if (!first)
         { 
             int rand = Random.Range(0, batches.Length - 1);
-            Debug.Log(rand);
             arrayPos = rand;
         }
 
@@ -66,18 +63,22 @@ public class BatchSpawner : MonoBehaviour
         //create a number of instances at the interval
         for (int i = 0; i < numberOfInstances; i++)
         {
-            switch(batches[arrayPos].enemyType)
+            
+            switch(batches[arrayPos].enemyType[i])
             {
                 case 0:
                     gameObject.GetComponent<EnemyType1Spawner>().SpawnEnemy();
+                    
                     break;
 
                 case 1:
                     gameObject.GetComponent<EnemyType2Spawner>().SpawnEnemy();
+                    
                     break; 
 
                 case 2:
                     gameObject.GetComponent<EnemyType3Spawner>().SpawnEnemy();
+                    
                     break;
             }
         }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5099e607cfdefe442bb4853aee41cf8a, type: 3}
-  m_Name: test
+  m_Name: 3Dragon
   m_EditorClassIdentifier: 
-  enemyType: 0
-  numberOfIntervals: 5
-  numberOfPrefabsToCreatePerInterval: 2
-  spawnInterval: 1
+  enemyType: 010000000100000001000000
+  numberOfIntervals: 2
+  numberOfPrefabsToCreatePerInterval: 3
+  spawnInterval: 2
