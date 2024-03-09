@@ -53,22 +53,31 @@ public class obstacleSpawner : MonoBehaviour
 
     void UpdateSpawnedObjects()
     {
+        
         // Iterate over spawned objects in reverse order
         for (int i = spawnedObjects.Count - 1; i >= 0; i--)
         {
-            GameObject obj = spawnedObjects[i];
+            if (spawnedObjects[i])
+            {
+                GameObject obj = spawnedObjects[i];
 
-            // Move the object downwards
-            obj.transform.Translate(Vector3.down * fallSpeed * Time.deltaTime);
+                // Move the object downwards
+                obj.transform.Translate(Vector3.down * fallSpeed * Time.deltaTime);
 
-            // Check if the object falls below the despawn Y position
-            if (obj.transform.position.y < despawnY)
+                // Check if the object falls below the despawn Y position
+                if (obj.transform.position.y < despawnY)
+                {
+                    // Remove the object from the list
+                    spawnedObjects.RemoveAt(i);
+
+                    // Destroy the object
+                    Destroy(obj);
+                }
+            }
+            else
             {
                 // Remove the object from the list
                 spawnedObjects.RemoveAt(i);
-
-                // Destroy the object
-                Destroy(obj);
             }
         }
     }

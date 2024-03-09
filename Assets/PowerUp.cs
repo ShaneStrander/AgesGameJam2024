@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject shooter;
     public int Style;
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        shooter = GameObject.FindWithTag("Shooter");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.tag == "Player")
         {
-            player.GetComponent<Shooting>().ShootStyle = Style;
+            Debug.Log("GOT UPGRADE");
+            shooter.GetComponent<Shooting>().ShootStyle = Style;
+            shooter.GetComponent<Shooting>().PowerTimer = 0f;
             Destroy(gameObject);
         }
     }
+
 }
