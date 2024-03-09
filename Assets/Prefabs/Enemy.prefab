@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2210315081148938932}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3176ff733191374f8e78e5d3420365e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathFrame: {fileID: 265105613908280038, guid: 636de704c26ba8a40ba044c7e00f12ee, type: 3}
+  deathFrame: {fileID: 9082824689661899016, guid: 062d2149afeec4c4f859157fb6cde4f1, type: 3}
 --- !u!61 &-2210315081148938932
 BoxCollider2D:
   m_ObjectHideFlags: 0

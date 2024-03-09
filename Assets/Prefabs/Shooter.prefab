@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 5340848069565934061}
   m_Layer: 0
   m_Name: Shooter
-  m_TagString: Untagged
+  m_TagString: Shooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,9 +197,10 @@ MonoBehaviour:
   bulletForce: 20
   RateOfFire: 0.3
   ElapsedTime: 0
-  ShootStyle: 1
+  ShootStyle: 4
   spread1: {fileID: 5418335657002451608}
   spread2: {fileID: 4217223530670204823}
+  isScatterShot: 0
 --- !u!1 &4514515866118164924
 GameObject:
   m_ObjectHideFlags: 0
