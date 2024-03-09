@@ -21,18 +21,18 @@ public class EnemyType1Spawner : MonoBehaviour
 
     void Update()
     {
-        // Increment the timer
-        timer += Time.deltaTime;
+        //// Increment the timer
+        //timer += Time.deltaTime;
 
-        // Check if it's time to spawn a new enemy
-        if (timer >= spawnInterval)
-        {
-            // Reset the timer
-            timer = 0f;
+        //// Check if it's time to spawn a new enemy
+        //if (timer >= spawnInterval)
+        //{
+        //    // Reset the timer
+        //    timer = 0f;
 
-            // Spawn a new enemy
-            SpawnEnemy();
-        }
+        //    // Spawn a new enemy
+        //    SpawnEnemy();
+        //}
     }
 
     public void SpawnEnemy()
@@ -47,6 +47,7 @@ public class EnemyType1Spawner : MonoBehaviour
         // Pass the player reference to the enemy's controller script
         EnemyController1 enemyController = newEnemy.AddComponent<EnemyController1>();
         enemyController.Initialize(player, moveSpeed);
+        Debug.Log("HÄR");
     }
 
     Vector3 GetRandomSpawnPosition()

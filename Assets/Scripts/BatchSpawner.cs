@@ -24,7 +24,7 @@ public class BatchSpawner : MonoBehaviour
         UpdateArrayVars(true);
     }
 
-    void FixedUpdate()
+    void Update()
     {
 
         timer += Time.deltaTime;
@@ -32,7 +32,8 @@ public class BatchSpawner : MonoBehaviour
         {
             if (currentInterval <= numberOfIntervals)
             {
-
+                SpawnBatchInInterval(arrayPos);
+                currentInterval++;
             }
         }
 
