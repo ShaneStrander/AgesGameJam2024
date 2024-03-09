@@ -35,7 +35,7 @@ public class EnemyType1Spawner : MonoBehaviour
         }
     }
 
-    void SpawnEnemy()
+    public void SpawnEnemy()
     {
         // Instantiate the enemy prefab at a random position off-screen
         Vector3 spawnPosition = GetRandomSpawnPosition();

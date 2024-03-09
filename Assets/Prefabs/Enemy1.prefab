@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 98632329997724828}
   - component: {fileID: 1000841791672645414}
   m_Layer: 0
-  m_Name: Enemy3
+  m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6ba6d8f6e49bddb4bb07061c9fb847ff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e27dbc5aaac48cb4188bdd66113d6157, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
