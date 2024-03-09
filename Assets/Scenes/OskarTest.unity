@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 900540152}
   - component: {fileID: 900540154}
   m_Layer: 0
-  m_Name: ScriptHolder
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
