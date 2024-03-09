@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class obstacleSpawner : MonoBehaviour
 {
     public GameObject objectPrefab; // The prefab of the object to spawn
+    public List<GameObject> tokens = new List<GameObject>(); // List to store references to token options
     public float spawnInterval = 2f; // Time interval between spawns
     public float minX = -5f; // Minimum X position of spawning
     public float maxX = 5f; // Maximum X position of spawning
@@ -12,7 +13,7 @@ public class obstacleSpawner : MonoBehaviour
 
     private float timer;
     private List<GameObject> spawnedObjects = new List<GameObject>(); // List to store references to spawned objects
-
+    
     void Update()
     {
         // Increment timer
@@ -33,10 +34,19 @@ public class obstacleSpawner : MonoBehaviour
     {
         // Calculate random X position within the given range
         float randomX = Random.Range(minX, maxX);
+        //Random.Range(0, 10) can return a value between 0 and 9
+        int chance = Random.Range(0, 10);
 
-        // Instantiate object at calculated position
-        GameObject newObject = Instantiate(objectPrefab, new Vector3(randomX, 10, 0), Quaternion.identity);
+        GameObject newObject;
 
+        if(chance == 9){
+            int rand = Random.Range(0, 3);
+            newObject = Instantiate(tokens[rand], new Vector3(randomX, 10, -1), Quaternion.identity);
+        }
+        else{
+            // Instantiate object at calculated position
+            newObject = Instantiate(objectPrefab, new Vector3(randomX, 10, -1), Quaternion.identity);
+        }
         // Add reference to the spawned object
         spawnedObjects.Add(newObject);
     }
