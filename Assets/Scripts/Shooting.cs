@@ -32,7 +32,7 @@ public class Shooting : MonoBehaviour
         switch (ShootStyle)
         {
             case 1:
-                RateOfFire = 0.4f;
+                RateOfFire = 0.6f;
                 if (Input.GetButton("Fire1") && ElapsedTime >= RateOfFire)
                 {
                     Shoot();
