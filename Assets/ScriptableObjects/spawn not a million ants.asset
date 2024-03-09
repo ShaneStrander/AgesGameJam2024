@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5099e607cfdefe442bb4853aee41cf8a, type: 3}
   m_Name: spawn not a million ants
   m_EditorClassIdentifier: 
-  enemyType: 0
-  numberOfIntervals: 0
-  numberOfPrefabsToCreatePerInterval: 0
-  spawnInterval: 0
+  enemyType: 1
+  enemyType2: 0
+  numberOfIntervals: 2
+  numberOfPrefabsToCreatePerInterval: 3
+  spawnInterval: 2
