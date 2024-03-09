@@ -115,5 +115,15 @@ public class EnemyController3 : MonoBehaviour
         //    // If player is null (destroyed or not found), just destroy the enemy
         //    Destroy(gameObject);
         //}
+
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

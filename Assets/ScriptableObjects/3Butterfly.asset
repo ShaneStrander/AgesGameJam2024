@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: 3Butterfly
   m_EditorClassIdentifier: 
   enemyType: 0
-  numberOfIntervals: 5
-  numberOfPrefabsToCreatePerInterval: 2
-  spawnInterval: 1
+  enemyType2: 0
+  enemyType3: 0
+  numberOfIntervals: 3
+  numberOfPrefabsToCreatePerInterval: 1
+  spawnInterval: 1.5

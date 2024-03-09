@@ -126,17 +126,20 @@ public class EnemyController2 : MonoBehaviour
                 jumpTimer = startTimer;
             }
 
-            // Check if the enemy has reached the player
-            if (Vector2.Distance(transform.position, player.position) < 0.1f)
-            {
-                // If so, destroy the enemy
-                Destroy(gameObject);
-            }
+           
         }
         //else
         //{
         //    // If player is null (destroyed or not found), just destroy the enemy
         //    Destroy(gameObject);
         //}
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
     }
 }

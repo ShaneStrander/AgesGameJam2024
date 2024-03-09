@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: 3Bee
   m_EditorClassIdentifier: 
   enemyType: 0
-  numberOfIntervals: 5
-  numberOfPrefabsToCreatePerInterval: 2
-  spawnInterval: 1
+  enemyType2: 0
+  enemyType3: 0
+  numberOfIntervals: 2
+  numberOfPrefabsToCreatePerInterval: 3
+  spawnInterval: 2
