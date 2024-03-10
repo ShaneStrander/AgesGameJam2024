@@ -197,10 +197,14 @@ MonoBehaviour:
   bulletForce: 20
   RateOfFire: 0.3
   ElapsedTime: 0
+  PowerDuration: 10
+  PowerTimer: 0
+  PowerActive: 0
   ShootStyle: 3
   spread1: {fileID: 5418335657002451608}
   spread2: {fileID: 4217223530670204823}
   isScatterShot: 0
+  clip: {fileID: 8300000, guid: dea16d205e9193c499b2cacaca9d1625, type: 3}
 --- !u!1 &4514515866118164924
 GameObject:
   m_ObjectHideFlags: 0

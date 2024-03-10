@@ -26,6 +26,8 @@ public class Shooting : MonoBehaviour
 
     public bool isScatterShot = false;
 
+    [SerializeField]
+    private AudioClip clip;
 
     Vector2 mousePos;
 
@@ -49,6 +51,7 @@ public class Shooting : MonoBehaviour
                 {
                     Shoot();
                     ElapsedTime = 0;
+                    AudioSource.PlayClipAtPoint(clip, transform.position);
                 }    
                 break;
             case 2:

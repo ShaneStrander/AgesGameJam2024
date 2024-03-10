@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFrame: {fileID: 9082824689661899016, guid: 062d2149afeec4c4f859157fb6cde4f1, type: 3}
+  clip: {fileID: 8300000, guid: 56493b204821320418d6d20c8f8026c7, type: 3}
 --- !u!61 &-2210315081148938932
 BoxCollider2D:
   m_ObjectHideFlags: 0
