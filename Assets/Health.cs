@@ -20,6 +20,11 @@ public class Health : MonoBehaviour
         {
             TakeDamage();
         }
+        if (collision.gameObject.tag == "Bottom")
+        {
+            health -= 100;
+            healthBar.GetComponent<Image>().fillAmount = health / 100f;
+        }
     }
 
     public void Update()
@@ -27,7 +32,7 @@ public class Health : MonoBehaviour
 
         if (health <= 0)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             SceneManager.LoadScene(0);
         }
     }
