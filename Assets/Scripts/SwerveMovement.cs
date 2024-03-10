@@ -5,13 +5,14 @@ using UnityEngine;
 public class SwerveMovement : MonoBehaviour
 {
     public float driftFactor = 0.05f;
-    public float accelerationfactor = 0.05f;
+    public float accelerationfactor = 3f;
     public float turnFactor = 3.5f;
-    public float maxspeed = 6;
+    public float maxspeed = 10;
     float accelerationinput = 0;
     float steeringinput = 0;
     float VelocityVSup = 0;
     float rotationangle = 0;
+    //private float horizontal;
 
     Rigidbody2D rb;
 
@@ -41,44 +42,56 @@ public class SwerveMovement : MonoBehaviour
         //Calculates how much forward we are going
         VelocityVSup = Vector2.Dot(transform.up, rb.velocity);
 
-        //Limit so you cant go faster than the mac speed
+        //Limit so you cant go faster than the max speed
         if (VelocityVSup > maxspeed && accelerationinput > 0) {
             return;
         }
 
         //Limit so we cant go faster than 50% max speed backwards
-        if (VelocityVSup < maxspeed * 0.05f && accelerationinput < 0)
+        if (VelocityVSup < -maxspeed * 1f && accelerationinput < 0)
         {
             return;
         }
 
         //Limit so we cant go faster in any direction accelerating
-        if (rb.velocity.sqrMagnitude > maxspeed * maxspeed && accelerationinput > 0)
+       if (rb.velocity.sqrMagnitude > maxspeed * maxspeed && accelerationinput > 0)
         {
-            return;
+           return;
         }
 
         //Apply drag if there is no acceleration and stops when letting go of the button
-        if (accelerationinput == 0) {
-            rb.drag = Mathf.Lerp(rb.drag, 3.0f, Time.deltaTime * 3);
-    }   else rb.drag = 0;
-   
+
+
+
+        //if (accelerationinput == 0)
+       // {
+            rb.drag = Mathf.Lerp(rb.drag, 3f, Time.deltaTime); ;
+        //}
+        //else rb.drag = 0;
+
         //Creates a force for the Ball
-        Vector2 forward = transform.up * maxspeed;
+        Vector2 forward = transform.up * accelerationinput * accelerationfactor;
+        // Vector2 reverse = -transform.up.normalized * accelerationinput * accelerationfactor;
+
+
 
         //Apply force and moves the ball forward
-        if (Input.GetKey("w"))
-        {
-            rb.AddForce(forward);
-        }
-        
+        //if (Input.GetKey("w"))
+        // {
+        rb.AddForce(forward);
+
+       // }
+       // else if (Input.GetKey("s")) 
+            //{
+
+       // }
 
     }
 
     void ApplySteering()
     {
         //Limit ball ability to turn when moving slowly
-        float minspeed = (rb.velocity.magnitude / 4);
+        float minspeed = (rb.velocity.magnitude / 1);
         minspeed = Mathf.Clamp01(minspeed);
         
         //Update rotation angle based on input
@@ -86,6 +99,11 @@ public class SwerveMovement : MonoBehaviour
 
         //Apply steering by rotating the ball
         rb.MoveRotation(rotationangle);
+        if (rotationangle <= -75) {
+            rotationangle = -75;
+        } else if (rotationangle >= 75) {
+            rotationangle = 75;
+        }
     }
 
 
@@ -94,7 +112,7 @@ public class SwerveMovement : MonoBehaviour
         Vector2 forwardVelocity = transform.up * Vector2.Dot(rb.velocity, transform.up);
         Vector2 rightVelocity = transform.right * Vector2.Dot(rb.velocity, transform.right);
 
-        rb.velocity = forwardVelocity + rightVelocity * driftFactor;
+       rb.velocity = forwardVelocity + rightVelocity * driftFactor;
     }
 
     //Creates the controls for the player (WASD)
@@ -107,6 +125,6 @@ public class SwerveMovement : MonoBehaviour
     private void CheckPlayerBounds()
     {
         //Creates bounds for the player
-      transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3, 3), Mathf.Clamp(transform.position.y, -4.4f, 1.4f), 0);
+    transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3, 3), Mathf.Clamp(transform.position.y, -4.4f, 4.4f), 0);
     }
 }
