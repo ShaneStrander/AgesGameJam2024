@@ -60,6 +60,7 @@ public class Shooting : MonoBehaviour
                 {
                     SpreadShoot();
                     ElapsedTime = 0;
+                    AudioSource.PlayClipAtPoint(clip, transform.position);
                 }
                 if (PowerTimer >= PowerDuration)
                 {
@@ -73,6 +74,7 @@ public class Shooting : MonoBehaviour
                 {
                     StartCoroutine(BurstShoot());
                     ElapsedTime = 0;
+                    AudioSource.PlayClipAtPoint(clip, transform.position);
                 }
                 if (PowerTimer >= PowerDuration)
                 {
@@ -87,6 +89,7 @@ public class Shooting : MonoBehaviour
                     Shoot();
                     ElapsedTime = 0;
                     isScatterShot = true;
+                    AudioSource.PlayClipAtPoint(clip, transform.position);
                 }
                 if (PowerTimer >= PowerDuration)
                 {
