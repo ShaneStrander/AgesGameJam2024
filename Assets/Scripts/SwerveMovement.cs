@@ -125,6 +125,6 @@ public class SwerveMovement : MonoBehaviour
     private void CheckPlayerBounds()
     {
         //Creates bounds for the player
-    transform.position = new Vector3(Mathf.Clamp(transform.position.x, -3, 3), Mathf.Clamp(transform.position.y, -4.4f, 4.4f), 0);
+    transform.position = new Vector3(Mathf.Clamp(transform.position.x, -4.5f, 4.7f), Mathf.Clamp(transform.position.y, -4.4f, 14.4f), 0);
     }
 }
