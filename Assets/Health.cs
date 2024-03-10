@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             //Time.timeScale = 0;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(2);
         }
     }
 
