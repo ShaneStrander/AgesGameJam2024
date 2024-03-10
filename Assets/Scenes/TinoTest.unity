@@ -229,7 +229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 88468849014512460, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 88468849014512460, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
       propertyPath: m_LocalPosition.z
@@ -263,17 +263,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 410479667270881715, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2843046136189316482, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4437847879606484695, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
       propertyPath: maxspeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437847879606484695, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
+      propertyPath: turnFactor
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4437847879606484695, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
+      propertyPath: driftFactor
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4437847879606484695, guid: 128cc42fd411f9a47b0059ed8505c390, type: 3}
       propertyPath: accelerationfactor
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
