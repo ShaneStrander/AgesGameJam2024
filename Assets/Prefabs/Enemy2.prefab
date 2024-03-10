@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1000841791672645414}
   - component: {fileID: -1523943619857127382}
   - component: {fileID: 1653309649487215250}
+  - component: {fileID: 5584363797163588631}
   m_Layer: 8
   m_Name: Enemy2
   m_TagString: enemy
@@ -145,3 +146,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFrame: {fileID: 9082824689661899016, guid: 062d2149afeec4c4f859157fb6cde4f1, type: 3}
   clip: {fileID: 8300000, guid: 56493b204821320418d6d20c8f8026c7, type: 3}
+--- !u!114 &5584363797163588631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265105613908280038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff58f134d60a2994fb03ff8afc7ca7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleFactor: 0.1
+  speed: 15
